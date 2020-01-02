@@ -27,3 +27,5 @@ class WidePay(object):
             pass
         return request.json()
 
+    def authentication(self):
+        return HTTPBasicAuth(self.id, self.token)
