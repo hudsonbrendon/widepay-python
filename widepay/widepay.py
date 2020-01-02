@@ -29,3 +29,32 @@ class WidePay(object):
 
     def authentication(self):
         return HTTPBasicAuth(self.id, self.token)
+
+    def gerar_carne(self):
+        """
+        Um carnê é formado por várias cobranças agrupadas, as parcelas de um carnê tem o vencimento mensal, por exemplo, ao gerar um carnê com o primeiro vencimento para 15/03, a próxima parcela terá o vencimento para 15/04, sempre com intervalo de 1 mês.
+
+        Saiba mais em:
+
+        https://widepay.github.io/api/index.html#carnes
+        """
+        url = self._get_url(path='/recebimentos/carnes/adicionar')
+        
+        data = dict(
+            cliente='Maria Mayse',
+            pessoa='Física',
+            vencimento='2020-10-10',
+            cpf='463.384.662-02',
+            dividir='Não',
+            parcelas=6,
+            itens=[
+                dict(
+                    descricao='Descrição item 1',
+                    valor=22.50
+                )
+            ]
+        )
+        
+        request = self._request(url=url, method='post', data=data)
+
+        return request
