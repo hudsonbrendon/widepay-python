@@ -7,5 +7,12 @@ install:
  - pip install pipenv
  - pipenv install --dev
 
+after_success:
+- pipenv install codecov --dev
+- codecov
+- coverage report -i
+- coverage report -i --rcfile .coveragerc_todo
+
 # command to run tests
 script: make dev
+
