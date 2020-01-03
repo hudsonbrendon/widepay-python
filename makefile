@@ -14,4 +14,3 @@ dev:
 	make install
 	make flake8
 	make test
-	make coverage
