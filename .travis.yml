@@ -6,6 +6,8 @@ python:
 install:
  - pip install pipenv
  - pipenv install --dev
+ - pip install coverage
+ - coverage run tests/tests.py
 
 after_success:
 - pipenv install codecov --dev
