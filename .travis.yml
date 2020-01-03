@@ -9,4 +9,4 @@ install:
  - "pipenv run pip install https://github.com/hudsonbrendon/widepay-python/archive/master.zip"
 
 # command to run tests
-script: make test
+script: make dev
