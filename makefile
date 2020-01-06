@@ -2,7 +2,7 @@ install:
 	pipenv run python setup.py install
 
 flake8:
-	pipenv run flake8 --max-line-length=160
+	pipenv run flake8 --max-line-length=160 --exclude=examples/
 
 coverage:
 	pipenv run coverage report -m
