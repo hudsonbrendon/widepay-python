@@ -15,7 +15,7 @@ if __name__ == '__main__':
         itens=[
             {
                 'descricao': 'Descrição item 1',
-                'valor': 100,
+                'valor': 20,
             }
         ]
     )
