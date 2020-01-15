@@ -6,8 +6,17 @@ from widepay import WidePay
 if __name__ == '__main__':
     widepay = WidePay(id=config('ID'), token=config('TOKEN'))
     carne = widepay.gerar_carne(
-        cliente='Cliente de teste',
+        cliente='Hudson Brendon',
         pessoa='Física',
-        vencimento='2020-12-12'
+        cpf='789.830.400-41',
+        vencimento='2020-12-12',
+        parcelas=10,
+        dividir='Não',
+        itens=[
+            {
+                'descricao': 'Descrição item 1',
+                'valor': 100,
+            }
+        ]
     )
     print(carne)
