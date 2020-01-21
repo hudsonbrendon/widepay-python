@@ -15,7 +15,7 @@ class TestWidePay(unittest.TestCase):
 
     def test_authentication(self):
         self.assertEqual(
-            self.widepay.authentication(),
+            self.widepay._authentication(),
             HTTPBasicAuth(self.widepay.id, self.widepay.token),
         )
 
