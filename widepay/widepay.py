@@ -14,8 +14,20 @@ class WidePay(object):
     def _get_url(self, path):
         return f"{self._URL}{path}"
 
-    def authentication(self):
+    def _authentication(self):
         return HTTPBasicAuth(self.id, self.token)
+
+    def _request(self, method, path, json, **kwargs):
+        request = requests.request(
+            method=method,
+            url=self._get_url(path),
+            auth=self._authentication(),
+            json=json,
+            **kwargs
+        )
+        json = request.json()
+
+        return json
 
     def gerar_carne(
         self,
@@ -46,7 +58,7 @@ class WidePay(object):
 
         https://widepay.github.io/api/index.html#carnes
         """
-        url = self._get_url(path="/recebimentos/carnes/adicionar")
+        path = "/recebimentos/carnes/adicionar"
 
         json = {
             "cliente": cliente,
@@ -68,6 +80,6 @@ class WidePay(object):
             "boleto": boleto,
         }
 
-        request = requests.post(url=url, json=json, auth=self.authentication())
+        request = self._request(method='post', path=path, json=json)
 
-        return request.json()
+        return request
