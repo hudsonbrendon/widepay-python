@@ -23,7 +23,7 @@ class WidePay(object):
             url=self._get_url(path),
             auth=self._authentication(),
             json=json,
-            **kwargs
+            **kwargs,
         )
         json = request.json()
 
@@ -80,6 +80,6 @@ class WidePay(object):
             "boleto": boleto,
         }
 
-        request = self._request(method='post', path=path, json=json)
+        request = self._request(method="post", path=path, json=json)
 
         return request
