@@ -1,1 +1,1 @@
-from .widepay import WidePay # noqa
+from .widepay import WidePay  # noqa
