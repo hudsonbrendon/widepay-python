@@ -2,7 +2,7 @@ install:
 	pipenv run python setup.py install
 
 black:
-	black . --check
+	pipenv run black . --check
 
 coverage:
 	pipenv run coverage report -m
