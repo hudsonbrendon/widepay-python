@@ -25,5 +25,8 @@ jobs:
       run: |
         make black
     - name: Test with unittest
+      env:
+          ID: ${{ secrets.ID }}
+          TOKEN: ${{ secrets.TOKEN }}
       run: |
         make dev
