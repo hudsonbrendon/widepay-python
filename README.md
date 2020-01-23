@@ -9,3 +9,16 @@ Com o Wide Pay você pode receber por boletos/carnês, cartão de crédito na in
 ![Wide Pay](logo.png)
 
 
+# Recursos
+
+- [ ]  Gerando Cobrança
+- [ ]  Boleto de uma Cobrança
+- [ ]  Consultar Cobrança
+- [ ]  Cancelamento de Cobrança
+- [ ]  Recebendo manualmente uma cobrança
+- [ ]  Recebendo notificação da cobrança
+- [x]  Gerando Carnês
+- [ ]  Montando um Carnê
+- [ ]  Consultando um Carnê
+- [ ]  Cancelando um Carnê
+- [ ]  Recebendo notificação do carnê
