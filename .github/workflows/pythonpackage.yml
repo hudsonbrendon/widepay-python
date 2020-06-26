@@ -24,6 +24,9 @@ jobs:
     - name: Lint with black
       run: |
         make black
+    - name: Lint with flake8
+      run: |
+        make flake
     - name: Test with unittest
       env:
           ID: ${{ secrets.ID }}

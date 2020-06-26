@@ -12,6 +12,6 @@ if __name__ == "__main__":
         vencimento="2020-12-12",
         parcelas=10,
         dividir="Não",
-        itens=[{"descricao": "Descrição item 1", "valor": 20,}],
+        itens=[{"descricao": "Descrição item 1", "valor": 20}],
     )
     print(carne)

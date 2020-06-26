@@ -4,6 +4,9 @@ install:
 black:
 	pipenv run black . --check
 
+flake:
+	pipenv run flake8
+
 coverage:
 	pipenv run coverage report -m
 

@@ -10,6 +10,6 @@ setup(
     author_email="contato.hudsonbrendon@gmail.com",
     license="MIT",
     packages=["widepay"],
-    install_requires=["requests",],
+    install_requires=["requests"],
     zip_safe=False,
 )
